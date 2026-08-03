@@ -1,0 +1,49 @@
+{
+  "name": "google-takeout-extension",
+  "version": "1.0.0",
+  "description": "Transform chaotic Google Photos Takeout into organized, deduplicated photo libraries with proper dates, albums, and metadata in TypeScript.",
+  "type": "module",
+  "main": "dist/bin/index.js",
+  "bin": {
+    "gpth": "dist/bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/bin/index.ts",
+    "dev": "tsx watch src/bin/index.ts",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "google-photos",
+    "takeout",
+    "exif",
+    "photo-organizer",
+    "metadata",
+    "deduplication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "exiftool-vendored": "^26.0.0",
+    "file-type": "^19.5.0",
+    "p-limit": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
+    "@types/node": "^22.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier": "^3.9.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
